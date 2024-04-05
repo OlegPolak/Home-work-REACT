@@ -2,7 +2,7 @@ import { Component } from 'react';
 class MyClass extends Component {
     constructor(props) {
         super(props);
-        this.state = { text: 'Hi people!!' };
+        this.state = { text: 'Hi people!!!' };
     }
    
     render() {

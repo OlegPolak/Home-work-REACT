@@ -16,9 +16,18 @@ const ToDoList = () => {
         setInput(value);
     };
 
+    const onEnterHandler = (e) => { 
+        if (e.key === 'Enter') {
+             const updatedElement = [...item, input];
+        setItem(updatedElement);
+        setInput('');
+        }
+    };
+
     return (
         <>
-            <input onChange={onChangeHandler} value={input} />
+            <input onKeyDown={onEnterHandler} onChange={onChangeHandler} value={input} />
+            <h2>{item.length }</h2>
             <ul>
                 {item.map((element, index) => (
                     <li key={`${element}${index}`}>

@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
         {<HelloWorld />}
         {<MyClass />}
-         <ToDoList/>
+         {/* <ToDoList/> */}
       </header>
     </div>
   );

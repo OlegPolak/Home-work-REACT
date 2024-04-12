@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ButtonDelete from './ButtonDelete';
 class MyClass extends Component {
     state = {
         todos: [],
@@ -50,7 +49,7 @@ class MyClass extends Component {
                 <input value={this.state.input} onChange={this.onChangeHandler}/>
                 <button onClick={this.addTask}>ADD ToDo</button>
                 {this.state.todos.map((todo, index) => <p key={index}>{todo}</p>)}
-                <ButtonDelete text={"DELETE LS"} type={'button'} />
+                <button type='button' onClick={() =>  localStorage.clear()}>Delete</button>
             </>
         );
     }

@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './ToDoList.module.css'
 
 const ButtonDelete = (props) => {
     return (
-        <button type={props.type} onClick={props.onClick}>
+        <button className={styles.btnDelete} type={props.type} onClick={props.onClick}>
             {props.text}
         </button>
     );

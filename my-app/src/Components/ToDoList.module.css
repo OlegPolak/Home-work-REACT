@@ -1,0 +1,30 @@
+.btn {
+    border: 2px solid transparent;
+    background-color: #61dafb;
+    border-radius: 16px;
+    color: #282c34;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #74ee3ce4;
+}
+
+.btnDelete {
+    border: 2px solid transparent;
+    background-color: #61dafb;
+    border-radius: 16px;
+    color: #282c34;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.btnDelete:hover {
+    background-color: #d42127;
+}
+
+.input {
+    border-radius: 16px;
+
+}

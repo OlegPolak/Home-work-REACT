@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import styles from './ToDoList.module.css'
+
 class MyClass extends Component {
     state = {
         todos: [],
@@ -40,16 +42,16 @@ class MyClass extends Component {
         clearInterval(this.intervalId); 
     }
 
-    //   this.clearLocalStorage = localStorage.clear('todos', JSON.stringify(this.state.todos));
+    
    
     render() {
         return (
             <>
                 <h3>{this.state.timer}</h3>
-                <input value={this.state.input} onChange={this.onChangeHandler}/>
-                <button onClick={this.addTask}>ADD ToDo</button>
+                <input className={styles.input} value={this.state.input} onChange={this.onChangeHandler}/>
+                <button className={styles.btn} onClick={this.addTask}>ADD ToDo</button>
                 {this.state.todos.map((todo, index) => <p key={index}>{todo}</p>)}
-                <button type='button' onClick={() =>  localStorage.clear()}>Delete</button>
+                <button className={styles.btnDelete} type='button' onClick={() =>  localStorage.clear()}>Delete LocalStorage</button>
             </>
         );
     }

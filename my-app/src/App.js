@@ -4,6 +4,7 @@ import './App.css';
 import HelloWorld from './Components/HelloWorld';
 import MyClass from './Components/MyClass';
 import ToDoList from './Components/ToDoList';
+import styles from './Components/ToDoList.module.css';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <header className="App-header">
         {<HelloWorld />}
         {isShowTimer ? <MyClass /> :  <ToDoList/> }
-        <button onClick={() => setIsShowTimer((prev) => !prev)}>Show Timer</button>
+        <button className={styles.btn} onClick={() => setIsShowTimer((prev) => !prev)}>Show Timer</button>
       </header>
     </div>
   );

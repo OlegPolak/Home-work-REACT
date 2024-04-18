@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import ListItem from "./ListItem";
 import ButtonDelete from "./ButtonDelete";
+import styles from './ToDoList.module.css'
 
 const ToDoList = () => {
     const initValues = [
@@ -38,13 +39,13 @@ const ToDoList = () => {
 
     return (
         <>
-            <input onKeyDown={onEnterHandler} onChange={onChangeHandler} value={input} />
-            <button onClick={() => onClickHandler(input)}>Add new To Do</button>
+            <input className={styles.input} onKeyDown={onEnterHandler} onChange={onChangeHandler} value={input} />
+            <button className={styles.btn} onClick={() => onClickHandler(input)}>Add new To Do</button>
             <h2>{item.length }</h2>
             <ul>
                 {item.map((element) => (
                     <ListItem key={element.id} id={element.id} name={element.name}>
-                        {<ButtonDelete text={"delete"} onClick={() => handleDelete(element.id)} type={'button'} />}
+                        {<ButtonDelete  text={"delete"} onClick={() => handleDelete(element.id)} type={'button'} />}
                     </ListItem>
                 ))}
             </ul>

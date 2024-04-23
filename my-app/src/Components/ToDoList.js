@@ -14,7 +14,7 @@ const ToDoList = () => {
     const [item, setItem] = useState(initValues);
 
     const onClickHandler = (input) => {
-        const updatedElement = [...item, { id: 5, name: input}];
+        const updatedElement = [...item, { id: Date.now(), name: input}];
         setItem(updatedElement);
         setInput('');
     };
@@ -26,7 +26,7 @@ const ToDoList = () => {
 
     const onEnterHandler = (e) => { 
         if (e.key === 'Enter') {
-             const updatedElement = [...item, { id: 5, name: input}];
+             const updatedElement = [...item, { id: Date.now(), name: input}];
         setItem(updatedElement);
         setInput('');
         }
@@ -39,7 +39,14 @@ const ToDoList = () => {
 
     return (
         <>
-            <input className={styles.input} onKeyDown={onEnterHandler} onChange={onChangeHandler} value={input} />
+            <input className={styles.input}
+                onKeyDown={onEnterHandler}
+                onChange={onChangeHandler}
+                value={input}
+                type="text"
+                minLength={3}
+                maxLength={50}
+                required/>
             <button className={styles.btn} onClick={() => onClickHandler(input)}>Add new To Do</button>
             <h2>{item.length }</h2>
             <ul>

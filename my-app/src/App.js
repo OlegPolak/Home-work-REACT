@@ -12,12 +12,12 @@ function App() {
   const [isShowTimer, setIsShowTimer] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         {<HelloWorld />}
         {isShowTimer ? <MyClass /> :  <ToDoList/> }
         <button className={styles.btn} onClick={() => setIsShowTimer((prev) => !prev)}>Show Timer</button>
-      </header>
-      {/* <TodoCheck/> */}
+      </header> */}
+     <TodoCheck/> 
     </div>
   );
 }
